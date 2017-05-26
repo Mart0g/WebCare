@@ -25,11 +25,35 @@
     <div class="clear"></div>
   </div>
   <div id="wrapper">
-  	<div class="one-half intro">
-      <a href="login.html" class="button blue">Вход като пациент</a>
-    </div>
-    <div class="one-half last intro">
-      <a href="index3.html" class="button green">Регистрация</a>
+    <div class="container">
+      <div class="content intro">
+        <h2 class="line">Вход като пациент</h2>
+        <div class="form-container intro">
+          <form class="forms" action="index2.html" method="post">
+            <fieldset>
+              <ol>
+                <li class="form-row text-input-row">
+                  <label>Email</label>
+                  <input type="email" name="email" value="" class="text-input required email">
+                </li>
+                <li class="form-row text-input-row">
+                  <label>Парола</label>
+                  <input type="password" name="password" value="" class="text-input required password">
+                </li>
+                <li class="form-row hidden-row">
+                  <input type="hidden" name="hidden" value="">
+                </li>
+                <li class="button-row">
+                  <input type="submit" value="Вход" name="submit" class="btn-submit">
+                </li>
+              </ol>
+              <input type="hidden" name="v_error" id="v-error" value="Required">
+              <input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+            </fieldset>
+          </form>
+          <div class="response"></div>
+        </div>
+      </div>
     </div>
     <div class="clear"></div>
   </div>
