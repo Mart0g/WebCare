@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>WebCare | Home</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
+<link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
+<script src="style/js/jquery-1.6.2.min.js"></script>
+<script src="style/js/superfish.js"></script>
+<script src="style/js/jquery.prettyPhoto.js"></script>
+<script src="style/js/jquery.nivo.slider.js"></script>
+<script>
+$(window).load(function () {
+    $('#slider').nivoSlider({
+        directionNavHide: false,
+        captionOpacity: 1.0
+    });
+});
+</script>
+</head>
+<body>
+<div id="body-wrapper">
+  <div id="header">
+    <div class="logo"> <a href="#"><img src="style/images/logo.png" alt=""></a> </div>
+    <div class="menu">
+      <ul class="sf-menu">
+        <li><a href="index2.html">Начало</a></li>
+        <li><a href="profile.html">Профил</a></li>
+        <li><a href="blog.html">Прегледи</a>
+          <ul>
+            <li><a href="post.html">График на лекарите</a></li>
+            <li><a href="typography.html">Проверка на резервирани часове</a></li>
+            <li><a href="columns.html">Резервация на домашно посещение</a></li>
+            <li><a href="contact.html">Резервация на посещение в болница</a></li>
+          </ul>
+        </li>
+        <li><a href="index2.html">Форум</a></li>
+        <li><a href="index.html">Изход</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="wrapper">
+    <div class="intro"><p>"Est medicina triplex: servare, cavere, mederi."</p><br><span>"Задачата на медицината е тройна: да пази, да предупреждава, да лекува."</span></div>
+    <div class="container">
+      <h3 class="line">Качи изображение</h3>
+      <h4>Добавете избраното от вас изображение:</h4><br>
+      <form action="#">
+        <p><input type="file" name="image" accept="image/*"></p>
+      </form><br><br>
+      <div class="one-half">
+        <div class="one-half">
+            <a href="profile.html" class="button green">Редактирай</a>
+        </div>
+        <div class="one-half last">
+            <a href="profile.html" class="button blue">Отмени</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebox">
+        <h3 class="line">Търсене</h3>
+        <form class="searchform" method="get" action="#">
+          <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+        </form>
+      </div>
+      <div class="sidebox">
+        <h3 class="line">Мнения във форума</h3>
+        <ul class="popular-posts">
+          <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+          <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><span>От maj_s_re6eniq_85</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+          <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><span>От maj_s_problemi_83</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+        </ul>
+      </div>
+      <div class="sidebox">
+        <h3 class="line">Място за реклами</h3>
+        <img src="style/images/art/m16.jpg" alt="" class="box col5">
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="push"></div>
+</div>
+<div id="footer">
+  <div class="footer">
+    <p>WebCare 2017 &copy; All rights reserved.</p>
+  </div>
+</div>
+<script src="style/js/scripts.js"></script>
+</body>
+</html>
