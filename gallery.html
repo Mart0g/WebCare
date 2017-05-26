@@ -124,8 +124,8 @@ $.fn.imagesLoaded = function (a) {
   </div>
   <div id="wrapper">
     <div class="intro">Клизма с кафе за всички кранисти и Харе Кришна за всички вегами!</div>
-    <h3 class="line">Профил</h3>
-    <div class="one-third">
+        <h3 class="line">Профил</h3>
+    <div class="one-fourth">
         <div class="clear"></div>
         <h3 class="line">Информация</h3>
         <div class="box col5"><a href="style/images/art/m1.jpg" rel="prettyPhoto[gallery]"><span class="overlay zoom"></span><img src="style/images/art/m9.jpg" alt=""></a></div>
@@ -147,55 +147,84 @@ $.fn.imagesLoaded = function (a) {
         <br>
         <a href="index2.html" class="button red">Изтрий профила ...</a>
     </div>
-    <div class="one-third">
-        <h3 class="line">Редакция на профила</h3>
-        <form class="forms" action="gallery.html" method="post">
-            <fieldset>
-              <ol>
-                <li class="form-row text-input-row">
-                  <label>Име</label>
-                  <input type="text" name="name" value="" class="text-input required name">
-                </li>
-                <li class="form-row text-input-row">
-                  <label>Фамилия</label>
-                  <input type="text" name="surname" value="" class="text-input required name">
-                </li>
-                <li class="form-row text-input-row">
-                  <label>Email</label>
-                  <input type="email" name="email" value="" class="text-input required email">
-                </li>
-                <li class="form-row text-input-row">
-                  <label>Роден/а на</label>
-                  <input type="date" name="date" value="" class="text-input required">
-                </li>
-                <li class="form-row text-input-row">
-                  <label>Пол</label><br><br>
-                  <input type="radio" name="gender" value="Мъж" checked> Мъж
-                  <input type="radio" name="gender" value="Жена"> Жена
-                </li>
-                <li class="form-row text-input-row">
-                  <label>Телефон</label>
-                  <input type="number" name="phone" value="" class="text-input required">
-                </li>
-                <li class="form-row hidden-row">
-                  <input type="hidden" name="hidden" value="">
-                </li>
-              </ol>
-              <div class="one-half">
-                <a href="gallery.html" class="button green">Редактирай</a>
-              </div>
-              <div class="one-half last">
-                <a href="gallery.html" class="button blue">Отмени</a>
-              </div>
-              <input type="hidden" name="v_error" id="v-error" value="Required">
-              <input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
-            </fieldset>
-          </form>
+    <div class="three-fourth last">
+        <div class="one-half">
+            <h3 class="line">Редакция на профила</h3>
+            <form class="forms" action="gallery.html" method="post">
+                <fieldset>
+                  <ol>
+                    <li class="form-row text-input-row">
+                      <label>Име</label>
+                      <input type="text" name="name" value="" class="text-input required name">
+                    </li>
+                    <li class="form-row text-input-row">
+                      <label>Фамилия</label>
+                      <input type="text" name="surname" value="" class="text-input required name">
+                    </li>
+                    <li class="form-row text-input-row">
+                      <label>Email</label>
+                      <input type="email" name="email" value="" class="text-input required email">
+                    </li>
+                    <li class="form-row text-input-row">
+                      <label>Роден/а на</label>
+                      <input type="date" name="date" value="" class="text-input required">
+                    </li>
+                    <li class="form-row text-input-row">
+                      <label>Пол</label><br><br>
+                      <input type="radio" name="gender" value="Мъж" checked> Мъж
+                      <input type="radio" name="gender" value="Жена"> Жена
+                    </li>
+                    <li class="form-row text-input-row">
+                      <label>Телефон</label>
+                      <input type="number" name="phone" value="" class="text-input required">
+                    </li>
+                    <li class="form-row hidden-row">
+                      <input type="hidden" name="hidden" value="">
+                    </li>
+                  </ol>
+                  <div class="one-half">
+                    <a href="gallery.html" class="button green">Редактирай</a>
+                  </div>
+                  <div class="one-half last">
+                    <a href="gallery.html" class="button blue">Отмени</a>
+                  </div>
+                  <input type="hidden" name="v_error" id="v-error" value="Required">
+                  <input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+                </fieldset>
+              </form>
+        </div>
+        <div class="one-half last">
+          <div class="sidebox">
+            <h3 class="line">Търсене</h3>
+            <form class="searchform" method="get" action="#">
+              <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+            </form>
+          </div>
+          <div class="sidebox">
+            <h3 class="line">Мнения във форума</h3>
+            <ul class="popular-posts">
+              <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+              <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От maj_s_re6eniq_85</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+              <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От maj_s_problemi_83</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+            </ul>
+          </div>
+          <div class="sidebox">
+            <h3 class="line">Място за реклами</h3>
+            <img src="style/images/art/m16.jpg" alt="" class="box col5">
+          </div>
+        </div>
     </div>
+    <div class="clear"></div>
   </div>
   <div class="push"></div>
+  </div>
 </div>
-<div class="clear"></div>
 <div id="footer">
   <div class="footer">
     <p>Copyright Socialike 2045. All rights reserved // Design by <a href="http://elemisfreebies.com">elemis</a>.</p>
