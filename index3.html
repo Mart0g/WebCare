@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Socialike | Slider II</title>
+<title>Socialike | Slider III</title>
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
@@ -12,14 +12,20 @@
 <script src="style/js/jquery-1.6.2.min.js"></script>
 <script src="style/js/superfish.js"></script>
 <script src="style/js/jquery.prettyPhoto.js"></script>
-<script src="style/js/jquery.nivo.slider.js"></script>
+<script src="scripts/swfobject/swfobject.js"></script>
 <script>
-$(window).load(function () {
-    $('#slider').nivoSlider({
-        directionNavHide: false,
-        captionOpacity: 1.0
-    });
-});
+var flashvars = {};
+flashvars.cssSource = "piecemaker/piecemaker.css";
+flashvars.xmlSource = "piecemaker/piecemaker.xml";
+var params = {};
+params.play = "true";
+params.menu = "false";
+params.scale = "showall";
+params.wmode = "transparent";
+params.allowfullscreen = "true";
+params.allowscriptaccess = "always";
+params.allownetworking = "all";
+swfobject.embedSWF('piecemaker/piecemaker.swf', 'piecemaker', '960', '520', '10', null, flashvars, params, null);
 </script>
 </head>
 <body>
@@ -48,10 +54,12 @@ $(window).load(function () {
     </div>
     <div class="clear"></div>
   </div>
-  <div class="slider-wrapper theme-default">
-    <div id="slider" class="nivoSlider"> <img title="Caption" src="style/images/art/s1.jpg" alt=""> <img src="style/images/art/s2.jpg" alt=""> <img src="style/images/art/s3.jpg" alt=""> <img src="style/images/art/s4.jpg" alt=""> </div>
-  </div>
   <div id="wrapper">
+    <div id="piecemaker-wrapper">
+      <div id="piecemaker">
+        <p>Put your alternative Non Flash content here.</p>
+      </div>
+    </div>
     <div class="intro">Phasellus vitae lectus sit amet ipsum fringilla viverra at et leo. Cras iaculis, sem vel venenatis sodales, elit dui elementum lorem, ut semper ligula ipsum at sapien.</div>
     <div class="two-third">
       <h3 class="line">Our Services</h3>
