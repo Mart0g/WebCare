@@ -1482,3 +1482,20 @@ ol.commentlist li {
 	clear: both;
 	visibility: hidden;
 }
+.ui-menu{
+	border-bottom:1px solid black;
+	width: 250px;
+}
+.ui-menu .ui-menu-item {
+	list-style-type: none;
+    color: black;
+	background-color: white;
+	width: 250px;
+    border-radius: 0px;
+    border: 1px solid black;
+	border-bottom: 1px solid white;
+
+}
+#tags {
+	width:250px;
+}
