@@ -1,0 +1,3 @@
+Fonts: SortsMillGoudyItalic, Arial, ClassicRound-Medium
+Images: http://simpledesktops.com/
+Icons: http://www.webiconset.com/mobile-application-icon-set/
