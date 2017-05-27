@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Резервация на посещение в болница</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="style/css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
+    <link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
+    <script src="style/js/jquery-1.6.2.min.js"></script>
+    <script src="style/js/superfish.js"></script>
+    <script src="style/js/jquery.prettyPhoto.js"></script>
+    <script src="style/js/jquery.nivo.slider.js"></script>
+
+    <!--Timetable -->
+    <script src="scripts/loadTimetable.js" type="text/javascript"></script>
+    <script src="scripts/daypilot-all.min.js?v=2864" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="style/css/calendar_transparent.css?v=2864"/>
+
+    <!-- Auto Complete-->
+    <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script> 
+
+    <link rel="stylesheet" href="scripts/autocomplete/easy-autocomplete.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/autocomplete/jquery.easy-autocomplete.min.js"></script> 
+    <script src="scripts/autocomplete/jquery.easy-autocomplete.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                directionNavHide: false,
+                captionOpacity: 1.0
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="body-wrapper">
+      <div id="header">
+        <div class="logo"> <a href="index.html"><img src="style/images/logo.png" alt=""></a> </div>
+        <div class="menu">
+          <ul class="sf-menu">
+            <li><a href="index2.html">Начало</a></li>
+            <li><a href="gallery.html">Профил</a></li>
+            <li><a href="reserve-hospital-visit.html">Прегледи</a>
+              <ul>
+                <li><a href="gallery.html">График на лекарите</a></li>
+                <li><a href="gallery.html">Проверка на резервирани часове</a></li>
+                <li><a href="reserve-home-visit.html">Резервация на домашно посещение</a></li>
+                <li><a href="reserve-hospital-visit.html">Резервация на посещение в болница</a></li>
+            </ul>
+        </li>
+        <li><a href="forum.html">Форум</a></li>
+        <li><a href="index.html">Изход</a></li>
+    </ul>
+</div>
+<div class="clear"></div>
+</div>
+<div id="wrapper">
+    <div class="two-third">
+        <div class="ui-widget">
+            <label for="tags">Име на лекар: </label>
+            <input id="tags">
+            <script>
+                var options = {
+                    data: ["blue", "green", "pink", "red", "yellow"]
+                };
+
+                $("#tags").easyAutocomplete(options);
+            </script>
+        </div>
+
+        <br /><br /><br />
+
+        <div id="dp"></div>
+        <script type="text/javascript">loadTimetable()</script>
+    </div>
+    <div class="one-third last">
+      <div class="sidebox">
+        <h3 class="line">Търсене</h3>
+        <form class="searchform" method="get" action="#">
+          <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+      </form>
+  </div>
+  <div class="sidebox">
+    <h3 class="line">Мнения във форума</h3>
+    <ul class="popular-posts">
+      <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
+        <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
+        <span>26 August 2045 | <a href="#">21 Comments</a></span> </li>
+        <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><span>От maj_s_re6eniq_85</span></h5>
+            <span>26 August 2045 | <a href="#">21 Comments</a></span> </li>
+            <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><span>От maj_s_problemi_83</span></h5>
+                <span>26 August 2045 | <a href="#">21 Comments</a></span> </li>
+            </ul>
+        </div>
+        <div class="sidebox">
+            <h3 class="line">Място за реклами</h3>
+            <img src="style/images/art/m16.jpg" alt="" class="box col5">
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="push"></div>
+</div>
+<div id="footer">
+  <div class="footer">
+    <p>Copyright Socialike 2045. All rights reserved // Design by <a href="http://elemisfreebies.com">elemis</a>.</p>
+</div>
+</div>
+<script src="style/js/scripts.js"></script>
+</body>
+</html>
