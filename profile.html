@@ -98,6 +98,19 @@ $.fn.imagesLoaded = function (a) {
     });
     return this
 };
+function deleteProfile(){
+    var ask = window.confirm("Наистина ли искате да изтриете акаунта си?");
+    if (ask) {
+        var confirm = window.alert("Заявката ви е изпратена за одобрение от администратор!");
+		document.location.href = "index.html";
+    } else {
+        document.location.href = "profile.html";
+	}
+}
+function clearChanges(){
+    var ask = window.confirm("Отменяте ли промените?");
+	document.location.href = "profile.html";
+}
 </script>
 </head>
 <body>
@@ -145,7 +158,7 @@ $.fn.imagesLoaded = function (a) {
         <br>
         <br>
         <br>
-        <a href="index2.html" class="button red">Изтрий профила ...</a>
+        <a href="#" onclick="deleteProfile()" class="button red">Изтрий профила ...</a>
     </div>
     <div class="three-fourth last">
         <div class="one-half">
@@ -183,10 +196,10 @@ $.fn.imagesLoaded = function (a) {
 						</li>
 					</ol>
 					<div class="one-half">
-						<a href="profile.html" class="button green">Редактирай</a>
+						<a href="#" onclick="alert('Your profile was updated')" class="button green">Редактирай</a>
 					</div>
 					<div class="one-half last">
-						<a href="profile.html" class="button blue">Отмени</a>
+						<a href="#" onclick="clearChanges()" class="button blue">Отмени</a>
 					</div>
                 </fieldset>
               </form>
