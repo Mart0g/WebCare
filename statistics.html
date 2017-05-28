@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>WebCare | Add Room</title>
+<title>WebCare | Add Topic</title>
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
@@ -13,6 +13,34 @@
 <script src="style/js/superfish.js"></script>
 <script src="style/js/jquery.prettyPhoto.js"></script>
 <script src="scripts/swfobject/swfobject.js"></script>
+<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Заетост на лекарите (брой пациенти)"
+      },
+    axisY: {
+        title: "Брой пациенти"
+      },
+        axisX: {
+        title: "Дни от седмицата"
+      },
+      data: [
+
+      {
+        dataPoints: [
+        { x: 1, y: 254, label: "Лекар 4"},
+        { x: 2, y: 136,  label: "Лекар 7" }
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
 <style type="text/css">
   ul li img.logo-add {
     width: 36px;
@@ -53,17 +81,34 @@
     <h3 class="line">Форум</h3>
     
     <div class="two-third">
-	    <h3 class="line">Добавяне на нов кабинет</h3>
+        <h3 class="line">Статистика на заетостта на лекарите</h3>
 		<div class="form-container intro">
-			<form class="forms" action="forum.html" method="post">
+			<div id="chartContainer" style="height: 400px; width: 95%;"></div>
+        </div>
+    </div>
+     <div class="one-third last">
+        <div class="sidebox">
+        <h3 class="line">Търсене</h3>
+        <form class="searchform" method="get" action="#">
+          <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+        </form>
+      </div>
+         <h3 class="line">Лекари</h3>
+      <div class="sidebox">
+        <form class="forms" action="statistics.html" method="post">
 				<fieldset legend="Създаване на нов виртуален кабинет">
 					<ol>
 						<li class="form-row text-input-row">
-							<label>Заглавие</label>
-							<input type="text" class="text-input required name"/>
+							<label>Специалност</label>
+							<select class="text-input">
+								<option value="doc4">Неврология</option>
+								<option value="doc5">Урология</option>
+								<option value="doc6">Ортопедия</option>
+								<option value="doc7">Педиатрия</option>
+							</select>
 						</li>
 						<li class="form-row text-input-row">
-							<label>Лекар</label>
+							<label>Лекар 1</label>
 							<select class="text-input">
 								<option value="doc4">Лекар 4</option>
 								<option value="doc5">Лекар 5</option>
@@ -72,47 +117,23 @@
 							</select>
 						</li>
 						<li class="form-row text-input-row">
-							<label>Описание:</label>
-							<textarea rows="10" style="resize: none; width:90%; float:left;"></textarea>
-							<div class="clear"></div>
+							<label>Лекар 2</label>
+							<select class="text-input">
+								<option value="doc4">Лекар 4</option>
+								<option value="doc5">Лекар 5</option>
+								<option value="doc6">Лекар 6</option>
+								<option value="doc7">Лекар 7</option>
+							</select>
+						</li>
+						<li class="button-row">
+                            <a style="float: left" href="statistics.html" class="button green">Изведи статистика</a>
+							<a style="float: right" href="forum.html" class="button blue">Назад</a>
 						</li>
 					</ol>
 					<input type="hidden" name="v_error" id="v-error" value="Required">
 					<input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
 				</fieldset>
 			</form>
-            <div class="one-half">
-                <a href="forum.html" class="button green">Добави нов кабинет</a>
-            </div>
-            <div class="one-half last">
-                <a href="forum.html" class="button blue">Отказ</a>
-            </div>
-		</div>
-    </div>
-     <div class="one-third last">
-      <div class="sidebox">
-        <h3 class="line">Търсене</h3>
-        <form class="searchform" method="get" action="#">
-          <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
-        </form>
-      </div>
-      <div class="sidebox">
-        <h3 class="line">Мнения във форума</h3>
-        <ul class="popular-posts">
-          <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
-            <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
-            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
-          <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
-            <h5><a href="#">Maria has a headache</a><span>От maj_s_re6eniq_85</span></h5>
-            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
-          <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
-            <h5><a href="#">Maria has a headache</a><span>От maj_s_problemi_83</span></h5>
-            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
-        </ul>
-      </div>
-      <div class="sidebox">
-        <h3 class="line">Място за реклами</h3>
-        <img src="style/images/art/m16.jpg" alt="" class="box col5">
       </div>
     </div>
     <div class="clear"></div>
