@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>WebCare | Add Room</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
+<link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
+<script src="style/js/jquery-1.6.2.min.js"></script>
+<script src="style/js/superfish.js"></script>
+<script src="style/js/jquery.prettyPhoto.js"></script>
+<script src="scripts/swfobject/swfobject.js"></script>
+<style type="text/css">
+  ul li img.logo-add {
+    width: 36px;
+    height: 36px;
+  }
+  ul li img.logo-add-discussion {
+    width: 28px;
+    height: 28px;
+    margin: 0 20px 0 0;
+  }
+</style>
+</head>
+<body>
+<div id="body-wrapper">
+  <div id="header">
+    <div class="logo"> <a href="#"><img src="style/images/logo.png" alt=""></a> </div>
+    <div class="menu">
+      <ul class="sf-menu">
+        <li><a href="index2.html">Начало</a></li>
+        <li><a href="profile.html">Профил</a></li>
+        <li><a href="forum.html">Прегледи</a>
+          <ul>
+            <li><a href="forum.html">График на лекарите</a></li>
+            <li><a href="forum.html">Проверка на резервирани часове</a></li>
+            <li><a href="reserve-home-visit.html">Резервация на домашно посещение</a></li>
+            <li><a href="reserve-hospital-visit.html">Резервация на посещение в болница</a></li>
+          </ul>
+        </li>
+        <li><a href="forum.html">Форум</a></li>
+        <li><a href="index.html">Изход</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="wrapper">
+    <div class="intro">Thank you for coming here. The day just got a bit better.</div>
+
+    <h3 class="line">Форум</h3>
+    
+    <div class="two-third">
+	    <h3 class="line">Редактиране на коментар</h3>
+		<div class="form-container intro">
+			<form class="forms" action="forum.html" method="post">
+				<fieldset legend="Създаване на нов виртуален кабинет">
+					<ol>
+						<li class="form-row text-input-row">
+							<label>Оригинален</label>
+							<input type="text" value="Ti daj parite na men, posle 6ti pokaja kak se pravi :D" class="text-input required name"/>
+						</li>
+						<li class="form-row text-input-row">
+							<label>Редактиран</label>
+							<textarea rows="10" style="resize: none; width:90%; float:left;"></textarea>
+							<div class="clear"></div>
+						</li>
+					</ol>
+					<input type="hidden" name="v_error" id="v-error" value="Required">
+					<input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+				</fieldset>
+			</form>
+            <div class="one-half">
+                <a href="discussion.html" class="button green">Запази</a>
+            </div>
+            <div class="one-half last">
+                <a href="discussion.html" class="button blue">Отказ</a>
+            </div>
+		</div>
+    </div>
+     <div class="one-third last">
+      <div class="sidebox">
+        <h3 class="line">Търсене</h3>
+        <form class="searchform" method="get" action="#">
+          <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+        </form>
+      </div>
+      <div class="sidebox">
+        <h3 class="line">Мнения във форума</h3>
+        <ul class="popular-posts">
+          <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+          <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><span>От maj_s_re6eniq_85</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+          <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
+            <h5><a href="#">Maria has a headache</a><span>От maj_s_problemi_83</span></h5>
+            <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+        </ul>
+      </div>
+      <div class="sidebox">
+        <h3 class="line">Място за реклами</h3>
+        <img src="style/images/art/m16.jpg" alt="" class="box col5">
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="push"></div>
+</div>
+<div id="footer">
+  <div class="footer">
+    <p>WebCare 2017 &copy; All rights reserved.</p>
+  </div>
+</div>
+<script src="style/js/scripts.js"></script>
+</body>
+</html>
