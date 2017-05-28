@@ -60,29 +60,51 @@
 
     <br><br>
     
-    <div class="two-third">
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <h4>Пацов</h4>
-      <p>Здравейте, <br>
-      Бих искал да попитам...&emsp;
-      <a href="">Отговори</a></p>
-      <div class="clear"></div>
-
-      <br><br>
-      <img style="margin-left: 30px" src="style/images/icon-3.png" alt="" class="left">
-      <h4>Духовников</h4>
-      <p>Здравей, <br>
-      Имам решение за теб...&emsp;
-      <a href="">Отговори</a></p>
-      <div class="clear"></div>
-
-      <br><br>
-      
-      <a href="viruses_answers.html">Добави коментар</a>&emsp;<a href="viruses.html">Отказ</a></p>
-
-      <br><br>
+    <div class="container">
+      <h3 class="line">Отговор на коментар</h3>
+      <div id="comments">
+        <ol id="singlecomments" class="commentlist">
+          <li class= "clearfix">
+            <div class="user"><img alt="" src="style/images/art/ad1.jpg" height="48" width="48" class="avatar"></div>
+            <div class="message">
+              <div class="top"></div>
+              <div class="middle">
+                <div class="info">
+                  <h4><a href="#">Jacqueline</a></h4>
+                  <span class="date">April 4, 2010</span> </div>
+                <p>Здравейте, бих искал да попитам...</p>
+              </div>
+              <div class="bottom"></div>
+            </div>
+            <div class="clear"></div>
+          <li class= "clearfix">
+            <div class="comment-form">
+        <div class="form-container">
+          <form class="forms" action="#" method="post">
+            <fieldset>
+              <ol>
+                <li class="form-row text-area-row">
+                  <label>Отговор</label>
+                  <textarea name="message" class="text-area required"></textarea>
+                </li>
+                <li class="form-row hidden-row">
+                  <input type="hidden" name="hidden" value="">
+                </li>
+              </ol>
+              <input type="hidden" name="v_error" id="v-error" value="Required">
+              <input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+            </fieldset>
+          </form>
+            <div class="one-half intro"><a href="viruses.html" class="button green">Отговори</a></div>
+            <div class="one-half last"><a style="float: right" href="viruses.html" class="button blue">Назад</a></div>
+          <div class="response"></div>
+        </div>
+      </div>
+          </li>
+        </ol>
+      </div>
     </div>
-     <div class="one-third last">
+     <div class="sidebar">
       <div class="sidebox">
         <h3 class="line">Търсене</h3>
         <form class="searchform" method="get" action="#">
