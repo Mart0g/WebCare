@@ -1557,3 +1557,67 @@ ol.commentlist li {
 .easy-autocomplete #tags{
 	color: #848484;
 }
+
+.inner {
+	background: #fdfdfd;
+    border: 1px solid #f9f9f9;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.05);
+    padding: 20px;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.doctor-hours-search {
+	position: relative;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 23px;
+    display: block;
+    font-family: 'Museo300Regular';
+    color: #797979;
+}
+
+.doctorNameInput, #doctorNameInput {
+	width: 100%;
+    border: 1px solid #e3e3e3;
+    background: #f7f7f7;
+    height: 35px;
+    line-height: 1;
+    padding: 5px 10px;
+    color: #555555;
+    resize: none;
+    font-family: 'Museo300Regular';
+    font-size: 14px;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+
+#submit {
+
+	color: #fff;
+    padding: 0 15px;
+    background: #2f2f32;
+    height: 30px;
+    line-height: 32px;
+    border-radius: 3px;
+    border: none;
+    width: auto;
+    cursor: pointer;
+    font-family: 'Museo500Regular';
+    font-size: 13px;
+}
+
+/*.form-submit{
+	display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}*/

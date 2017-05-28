@@ -48,7 +48,7 @@
         <div class="menu">
             <ul class="sf-menu">
                 <li><a href="index2.html">Начало</a></li>
-                <li><a href="profile.html">Профил</a></li>
+                <li><a href="gallery.html">Профил</a></li>
                 <li><a href="reserve-home-visit.html">Прегледи</a>
                     <ul>
                         <li><a href="doctors-hours-list.html">График на лекарите</a></li>
@@ -57,7 +57,7 @@
                         <li><a href="reserve-hospital-visit.html">Резервация на посещение в болница</a></li>
                     </ul>
                 </li>
-                <li><a href="forum.html">Форум</a></li>
+                <li><a href="index2.html">Форум</a></li>
                 <li><a href="index.html">Изход</a></li>
             </ul>
         </div>
@@ -66,41 +66,101 @@
 <div id="wrapper">
     <div class="two-third">
         <div class="ui-widget">
-            <label for="tags" id="tagsLabel">Име на лекар: </label>
+
+            <div class="outer">
+                <div class="inner">
+                    <div id="respond" class="comment-respond">
+                        <h3 class="comment-reply-title" id="reply-title">Търсене на работен график на лекар</h3>
+                        <form class="comment-form" id="commentform" method="post" name="commentform">
+                            <p class="doctor-hours-search">
+                                <label for="doctorNameInput">Име на доктор: </label>
+                                <input class="doctorNameInput" name="doctorName" type="text" value="">
+
+                                <script>
+                                    var options = {
+                                        data: ["Иванов", "Петров", "Георгиева", "Иванова", "Димитров"]
+                                    };
+
+                                    $("#tags").easyAutocomplete(options);
+                                    $(".easy-autocomplete").css("display", "table-cell");
+                                </script>
+
+
+                            </p>
+
+                            <p class="doctor-hours-search">
+                                <label for="doctorNameInput">От</label>
+                                <select class="doctorNameInput">
+                                    <option></option>
+                                    <option>Понеделник</option>
+                                    <option>Вторник   </option>
+                                    <option>Сряда     </option>
+                                    <option>Четвъртък </option>
+                                    <option>Петък     </option>
+                                    <option>Събота    </option>
+                                    <option>Неделя    </option>
+                                </select>
+                            </p>
+
+                            <p class="doctor-hours-search">
+                                <label for="doctorNameInput">До</label>
+                                <select class="doctorNameInput">
+                                    <option></option>
+                                    <option>Понеделник</option>
+                                    <option>Вторник   </option>
+                                    <option>Сряда     </option>
+                                    <option>Четвъртък </option>
+                                    <option>Петък     </option>
+                                    <option>Събота    </option>
+                                    <option>Неделя    </option>
+                                </select>
+                            </p>
+
+                            <p class="doctor-hours-search">
+                                <label for="doctorNameInput">Сортиране</label>
+                                <select class="doctorNameInput">
+                                    <option>Име на доктор (Възходящо)</option>
+                                    <option>Име на доктор (Низходящо)</option>
+                                </select>
+                            </p>
+
+                            <p class="form-submit">
+                                <input name="submit" type="submit" id="submit" class="submit" value="Търси"/>
+                            </p>
+
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- <label for="tags" id="tagsLabel">Име на лекар: </label>
             <input id="tags" placeholder="Моля въведете име на лекар">
             <script>
                 var options = {
                     data: ["Иванов", "Петров", "Георгиева", "Иванова", "Димитров"]
                 };
-				
-				/*function filterOptions(val){
-					$("#tags").easyAutocomplete(options);
-					var filtered = $.extend(true, [], options);
-					filtered["data"] = options["data"].filter(function(element){
-						return element.toLowerCase().indexOf(val.toLowerCase())>-1;
-					});
-					$("#tags").easyAutocomplete(filtered);
-				}*/
-				
+
                 $("#tags").easyAutocomplete(options);
                 $(".easy-autocomplete").css("display", "table-cell");
-            </script>
+            </script> -->
         </div>
 
         <br /><br /><br />
 
-        <div id="dp"></div>
-        <script type="text/javascript">loadTimetable()</script>
+<!--         <div id="dp"></div>
+        <script type="text/javascript">loadTimetable()</script> -->
 
-        <div id="myModal" class="modal">
+<!--         <div id="myModal" class="modal">
 
-          <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>Some text in the Modal..</p>
           </div>
 
-        </div>
+        </div> -->
 
 
     </div>
