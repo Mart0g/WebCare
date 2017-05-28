@@ -6,11 +6,13 @@
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
 <link rel="stylesheet" type="text/css" href="style/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
 <link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
 <link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
 <script src="style/js/jquery-1.6.2.min.js"></script>
 <script src="style/js/superfish.js"></script>
 <script src="style/js/jquery.prettyPhoto.js"></script>
+<script src="scripts/swfobject/swfobject.js"></script>
 <style type="text/css">
   ul li img.logo-add {
     width: 36px;
@@ -51,68 +53,39 @@
     <h3 class="line">Форум</h3>
     
     <div class="two-third">
-
-      <h3 class="line">Общи теми</h3>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="">Общ форум</a></h4>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="">Правила на форума</a></h4>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="">Статистики</a></h4>
-      <div class="clear"></div>
-
-      <ul class="popular-posts">
-        <li> 
-          <a href="#"><img class="logo-add-discussion" src="style/images/icon-text.png" alt=""></a>
-          <span>&nbsp;</span>
-          <h4><a href="add-topic.html">Добави нова дискусия</a></h4>
-        </li>        
-      </ul>
-
-      <p><br></p>
-
-      <h3 class="line">Виртуални кабинети</h3>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="doctor.html">Доктор 1</a></h4>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="doctor.html">Доктор 2</a></h4>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-2.png" alt="" class="left">
-      <span>&nbsp;</span>
-      <h4><a href="doctor.html">Доктор 3</a></h4>
-      <div class="clear"></div>
-
-      <ul class="popular-posts">
-        <li> 
-          <a href="#"><img class="logo-add-discussion" src="style/images/icon-text.png" alt=""></a>
-          <span>&nbsp;</span>
-          <h4><a href="#">Добави нов кабинет</a></h4>
-        </li>        
-      </ul>
-
-      <p><br></p>
-
-      <div class="page-navi">
-        <ul>
-          <li><a href="#" class="current">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-        </ul>
-      </div>
+	
+		<div class="form-container intro">
+			<form class="forms" action="forum.html" method="post">
+				<fieldset legend="Създаване на нова тема">
+					<ol>
+						<li class="form-row text-input-row">
+							<label>Заглавие</label>
+							<input type="text" class="text-input required name"/>
+						</li>
+						<li class="form-row text-input-row">
+							<label>Категория</label>
+							<select class="text-input">
+								<option value="fractures">Счупвания</option>
+								<option value="abdominal-diseases">Коремни болести</option>
+								<option value="rash">Обриви</option>
+								<option value="allergies">Алергии</option>
+								<option value="heart-diseases">Сърдечно-съдови заболявания</option>
+							</select>
+						</li>
+						<li class="form-row text-input-row">
+							<label>Описание:</label>
+							<textarea rows="10" style="width:90%; float:left;"></textarea>
+							<div class="clear"></div>
+						</li>
+						<li class="button-row">
+							<input type="submit" value="Добави нова тема" name="submit" class="btn-submit">
+						</li>
+					</ol>
+					<input type="hidden" name="v_error" id="v-error" value="Required">
+					<input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+				</fieldset>
+			</form>
+		</div>
     </div>
      <div class="one-third last">
       <div class="sidebox">

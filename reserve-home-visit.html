@@ -70,9 +70,18 @@
             <input id="tags">
             <script>
                 var options = {
-                    data: ["blue", "green", "pink", "red", "yellow"]
+                    data: ["Ivan Ivanov", "Georgi Georgiev", "Vasil Petrov", "Metodi Andonov", "Maria Todorova"]
                 };
-
+				
+				/*function filterOptions(val){
+					$("#tags").easyAutocomplete(options);
+					var filtered = $.extend(true, [], options);
+					filtered["data"] = options["data"].filter(function(element){
+						return element.toLowerCase().indexOf(val.toLowerCase())>-1;
+					});
+					$("#tags").easyAutocomplete(filtered);
+				}*/
+				
                 $("#tags").easyAutocomplete(options);
             </script>
         </div>

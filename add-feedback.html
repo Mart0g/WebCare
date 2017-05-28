@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>WebCare | Profile</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
+<link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
+<script src="style/js/jquery-1.6.2.min.js"></script>
+<script src="style/js/superfish.js"></script>
+<script src="style/js/jquery.prettyPhoto.js"></script>
+<script src="scripts/swfobject/swfobject.js"></script>
+<script>
+$(document).ready(function () {
+    var
+    speed = 1000, // animation speed
+        $wall = $('#portfolio .items'),
+        masonryOptions = { // initial masonry options
+            itemSelector: '.box:not(.invis)',
+            animate: true,
+            animationOptions: {
+                duration: speed,
+                queue: false
+            }
+        };
+    $wall.imagesLoaded(function () {
+        $wall.masonry(masonryOptions);
+        // Create array of filters from link href
+        var arrFilter = [];
+        $('#filtering-nav a').each(function () {
+            fhash = $(this).attr('href').replace('#', '');
+            if (fhash != 'all') {
+                arrFilter.push(fhash);
+            }
+        });
+        //  Get the parameter value after the # symbol
+        var url = document.URL.split('#')[1];
+        if (url == undefined) {
+            url = 'all';
+        }
+        $('#filtering-nav a.' + url).parent().addClass('active');
+        if (jQuery.inArray(url, arrFilter) > '-1') {
+            // set masonry options animate to false
+            masonryOptions.animate = false;
+            // hide boxes that don't match the filter class
+            $wall.children().not('.' + url).toggleClass('invis').hide();
+        }
+        //	imageSetCss($(".box"));
+        // run masonry again
+        $wall.masonry(masonryOptions);
+        //	imageFadeIn($(".box"));
+        $wall.animate({
+            opacity: 1
+        }, 1000);
+    });
+    $('#filtering-nav a').click(function (e) {
+        var color = $(this).attr('class');
+        filterClass = '.' + color;
+        $('#filtering-nav li').removeClass('active');
+        $(this).parent().addClass('active');
+        if (filterClass == '.all') {
+            // show all hidden boxes
+            $wall.children('.invis').toggleClass('invis').fadeIn(speed);
+        } else {
+            // hide visible boxes 
+            $wall.children().not(filterClass).not('.invis').toggleClass('invis').fadeOut(speed);
+            // show hidden boxes
+            $wall.children(filterClass + '.invis').toggleClass('invis').fadeIn(speed);
+        }
+        $wall.masonry({
+            animate: true
+        });
+        // set hash in URL
+        location.hash = color;
+        e.preventDefault();
+    });
+});
+$.fn.imagesLoaded = function (a) {
+    var
+    b = this.find("img"),
+        c = [],
+        d = this,
+        e = b.length;
+    if (!b.length) {
+        a.call(this);
+        return this
+    }
+    b.one("load error", function () {
+        --e === 0 && (e = b.length, b.one("load error", function () {
+            --e === 0 && a.call(d)
+        }).each(function () {
+            this.src = c.shift()
+        }))
+    }).each(function () {
+        c.push(this.src), this.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+    });
+    return this
+};
+</script>
+</head>
+<body>
+<div id="body-wrapper">
+  <div id="header">
+    <div class="logo"> <a href="#"><img src="style/images/logo.png" alt=""></a> </div>
+    <div class="menu">
+      <ul class="sf-menu">
+        <li><a href="index2.html">Начало</a></li>
+        <li><a href="profile.html">Профил</a></li>
+        <li><a href="profile.html">Прегледи</a>
+          <ul>
+            <li><a href="profile.html">График на лекарите</a></li>
+            <li><a href="profile.html">Проверка на резервирани часове</a></li>
+            <li><a href="reserve-home-visit.html">Резервация на домашно посещение</a></li>
+            <li><a href="reserve-hospital-visit.html">Резервация на посещение в болница</a></li>
+          </ul>
+        </li>
+        <li><a href="forum.html">Форум</a></li>
+        <li><a href="index.html">Изход</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="wrapper">
+    <div class="intro"><p>"Est medicina triplex: servare, cavere, mederi."</p><br><span>"Задачата на медицината е тройна: да пази, да предупреждава, да лекува."</span></div>
+        <h3 class="line">Профил</h3>
+    <div class="container">
+		<div class="one-third">
+		    <div class="clear"></div>
+			<h3 class="line">Профил</h3>
+			<div class="box col5"><a href="style/images/art/m9.jpg" rel="prettyPhoto[profile]"><span class="overlay zoom"></span><img src="style/images/art/m9.jpg" alt=""></a></div>      
+		</div>
+        <div class="two-third last">
+			<h3 class="line">Информация за лекаря</h3>
+			<div class="forms">
+				<fieldset>
+				<ol>
+					<li class="form-row text-input-row">
+					<label>Имена</label>
+					<input type="text" name="name" class="text-input required name" value="Иван Петров Петров" disabled="true">
+					</li>
+					<li class="form-row text-input-row">
+					<label>Email</label>
+					<input type="email" name="email" class="text-input required email" value="ivan.petrov@gmail.com" disabled="true">
+					</li>
+					<li class="form-row text-input-row">
+					<label>Роден/а на</label>
+					<input type="text" name="date"  class="text-input required" value="22.11.1970 г." disabled="true">
+					</li>
+					<li class="form-row text-input-row">
+					<label>Пол</label><br><br>
+					<input type="radio" name="gender" value="Мъж" checked disabled="true"> Мъж
+					<input type="radio" name="gender" value="Жена" disabled="true"> Жена
+					</li>
+					<li class="form-row text-input-row">
+					<label>Телефон</label>
+					<input type="number" name="phone" class="text-input required" value="0896532698" disabled="true">
+					</li>
+					<li class="form-row hidden-row">
+					<input type="hidden" name="hidden" value="">
+					</li>
+				</ol>
+				<input type="hidden" name="v_error" id="v-error" value="Required">
+				<input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+				</fieldset>
+			</div>
+		</div>
+		
+		<h3>Мнения:</h3>
+		<div class="post chat">
+			<div class="icon-chat"></div>
+			<div class="content">
+			<div class="top"></div>
+			<div class="middle">
+				<div class="post-text">
+				<h2 class="title"><a href="#">Maria Petrova написа:</a></h2>
+				<p class="chat-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt felis at quam feugiat, sed suscipit orci imperdiet.
+					Nulla sed ultricies massa, vel tincidunt eros. Duis ornare leo ac ullamcorper posuere. Nunc et elementum nibh, et hendrerit neque.
+					Sed efficitur lacus arcu, posuere dignissim orci euismod a. Pellentesque sodales efficitur eros, at egestas diam scelerisque sed.
+					Phasellus vel turpis non lectus fringilla viverra quis nec magna
+				</p>
+				</div>
+				<div class="meta-wrapper">
+				<div class="meta">
+					<ul class="post-info">
+						<li><span class="post-link"></span><a href="#">26 August 2045</a></li>
+						<li><span class="post-comment"></span><a href="#">15</a></li>
+						<li><span class="post-tag"></span><a href="#">quote</a>, <a href="#">library</a></li>
+					</ul>
+					<div class="share"><span class="post-share"></span><a href="#">Share</a></div>
+					<div class="clear"></div>
+				</div>
+				</div>
+			</div>
+			<div class="bottom"></div>
+			</div>
+		</div>
+		<div class="post chat">
+			<div class="icon-chat"></div>
+			<div class="content">
+				<div class="top"></div>
+				<div class="middle">
+					<div class="post-text">
+					<h2 class="title"><a href="#">Darin Chukurov написа:</a></h2>
+					<p class="chat-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt felis at quam feugiat, sed suscipit orci imperdiet.
+						Nulla sed ultricies massa, vel tincidunt eros. Duis ornare leo ac ullamcorper posuere. Nunc et elementum nibh, et hendrerit neque.
+						Sed efficitur lacus arcu, posuere dignissim orci euismod a. Pellentesque sodales efficitur eros, at egestas diam scelerisque sed.
+						Phasellus vel turpis non lectus fringilla viverra quis nec magna
+					</p>
+					</div>
+					<div class="meta-wrapper">
+					<div class="meta">
+						<ul class="post-info">
+						<li><span class="post-link"></span><a href="#">26 August 2045</a></li>
+						<li><span class="post-comment"></span><a href="#">15</a></li>
+						<li><span class="post-tag"></span><a href="#">quote</a>, <a href="#">library</a></li>
+						</ul>
+						<div class="share"><span class="post-share"></span><a href="#">Share</a></div>
+						<div class="clear"></div>
+					</div>
+					</div>
+				</div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+
+		<div class="form-container intro">
+			<div class="icon-chat"></div>
+			<form class="forms" action="add-feedback.html">
+				<fieldset>
+					<ol>
+						<li class="button-row">
+							<input type="submit" value="Добавете мнение" name="submit" style="width: 85%" class="btn-submit">
+						</li>
+					</ol>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+    <div class="sidebar">  
+          <div class="sidebox">
+            <h3 class="line">Търсене</h3>
+            <form class="searchform" method="get" action="#">
+              <input type="text" id="s" name="s" value="Търси в сайта" onFocus="this.value=''" onBlur="this.value='type and hit enter'">
+            </form>
+          </div>
+          <div class="sidebox">
+            <h3 class="line">Мнения във форума</h3>
+            <ul class="popular-posts">
+              <li> <a href="#"><img src="style/images/art/ad1.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От 4i4o_doktor</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+              <li> <a href="#"><img src="style/images/art/ad2.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От maj_s_re6eniq_85</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+              <li> <a href="#"><img src="style/images/art/ad3.jpg" alt=""></a>
+                <h5><a href="#">Maria has a headache</a><br><span>От maj_s_problemi_83</span></h5>
+                <span>26 Август 2045 | <a href="#">21 Коментара</a></span> </li>
+            </ul>
+          </div>
+          <div class="sidebox">
+            <h3 class="line">Място за реклами</h3>
+            <img src="style/images/art/m16.jpg" alt="" class="box col5">
+          </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="push"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="footer">
+    <p>WebCare 2017 &copy; All rights reserved.</p>
+  </div>
+</div>
+<script src="style/js/scripts.js"></script>
+</body>
+</html>
