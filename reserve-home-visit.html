@@ -32,14 +32,14 @@
     <script src="scripts/autocomplete/jquery.easy-autocomplete.min.js"></script> 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script>
+<!--     <script>
         $(window).load(function () {
             $('#slider').nivoSlider({
                 directionNavHide: false,
                 captionOpacity: 1.0
             });
         });
-    </script>
+    </script> -->
 </head>
 <body>
     <div id="body-wrapper">
@@ -66,11 +66,11 @@
 <div id="wrapper">
     <div class="two-third">
         <div class="ui-widget">
-            <label for="tags">Име на лекар: </label>
-            <input id="tags">
+            <label for="tags" id="tagsLabel">Име на лекар: </label>
+            <input id="tags" placeholder="Моля въведете име на лекар">
             <script>
                 var options = {
-                    data: ["Ivan Ivanov", "Georgi Georgiev", "Vasil Petrov", "Metodi Andonov", "Maria Todorova"]
+                    data: ["Иванов", "Петров", "Георгиева", "Иванова", "Димитров"]
                 };
 				
 				/*function filterOptions(val){
@@ -83,6 +83,7 @@
 				}*/
 				
                 $("#tags").easyAutocomplete(options);
+                $(".easy-autocomplete").css("display", "table-cell");
             </script>
         </div>
 
@@ -90,6 +91,18 @@
 
         <div id="dp"></div>
         <script type="text/javascript">loadTimetable()</script>
+
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+
+        </div>
+
+
     </div>
     <div class="one-third last">
       <div class="sidebox">

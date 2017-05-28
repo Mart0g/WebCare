@@ -1499,3 +1499,61 @@ ol.commentlist li {
 #tags {
 	width:250px;
 }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#tags {
+    display: table-cell; 
+}
+
+#tagsLabel {
+	display: table-cell; 
+	font-weight: normal;
+	font-family: "ClassicRound-Medium";
+	font-size: 18px;
+/*	text-transform: uppercase;*/
+    margin-bottom: 30px;
+    padding: 0;
+/*    text-align: center;*/
+    color: #606060;
+}
+
+#tags {
+	color: #848484;
+/*    width: 251px;
+    height: 33px;
+    padding: 0 7px;*/
+    font-size: 14px;
+    border: none;
+    font-family: "SortsMillGoudyItalic";
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    border: 1px solid #d5d5d5;
+    background: #f4f4f4;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+/*    margin: 0em 0em 0em 0em;*/
+    font: 13.3333px Arial;
+}
+
+.easy-autocomplete #tags{
+	color: #848484;
+}

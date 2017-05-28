@@ -56,8 +56,11 @@ function loadTimetable()
             end: args.end,
             id: DayPilot.guid(),
             resource: args.resource,
-            text: name
+            text: name,
+            //modal.style.display = "block";
         });
+
+
         dp.events.add(e);
         dp.clearSelection();
         dp.message("Посещението е записано");
@@ -67,9 +70,9 @@ function loadTimetable()
         alert("DoubleClick: start: " + args.start + " end: " + args.end + " resource: " + args.resource);
     };
     
-    dp.onEventClick = function(args) {
-        alert("Часът вече e запазен");
-    };
+    // dp.onEventClick = function(args) {
+    //     alert("Часът вече e запазен");
+    // };
     
     dp.init();
 
@@ -80,4 +83,5 @@ function loadTimetable()
         text: "Special event"
     });
     dp.events.add(e);
+
 }
