@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<title>Socialike | Blog</title>
+<title>WebCare | Comment Reply</title>
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
@@ -51,33 +51,60 @@
 
     <div class="menu">
       <ul class="sf-menu">
-        <li><a href="common_forum.html">Актуално</a></li>
-        <li><a href="new_in_common_forum.html">Ново</a></li>
-        <li><a href="diseases.html">Чести заболявания</a></li>
+        <li><a href="">Пролетните вируси</a></li>
+        <li><a href="viruses.html">Назад</a></li>
       </ul>
-    </div> 
+    </div>
     <div class="clear"></div>
 
 
     <br><br>
     
-    <div class="two-third">
-      <img src="style/images/icon-1.png" alt="" class="left">
-      <h4>Пролетните вируси. Симптоми, опасности, как да се предпазим?</h4>
-      <p><a href="viruses.html">Научи повече</a></p>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-1.png" alt="" class="left">
-      <h4>Обривите - причини, съвети, мнения</h4>
-      <p><a href="viruses.html">Научи повече</a></p>
-      <div class="clear"></div>
-
-      <img src="style/images/icon-1.png" alt="" class="left">
-      <h4>Счупвания - какво да правим? Бързи реакции и съвети.</h4>
-      <p><a href="viruses.html">Научи повече</a></p>
-      <div class="clear"></div>
+    <div class="container">
+      <h3 class="line">Отговор на коментар</h3>
+      <div id="comments">
+        <ol id="singlecomments" class="commentlist">
+          <li class= "clearfix">
+            <div class="user"><img alt="" src="style/images/art/ad1.jpg" height="48" width="48" class="avatar"></div>
+            <div class="message">
+              <div class="top"></div>
+              <div class="middle">
+                <div class="info">
+                  <h4><a href="#">Jacqueline</a></h4>
+                  <span class="date">April 4, 2010</span> </div>
+                <p>Здравейте, бих искал да попитам...</p>
+              </div>
+              <div class="bottom"></div>
+            </div>
+            <div class="clear"></div>
+          <li class= "clearfix">
+            <div class="comment-form">
+        <div class="form-container">
+          <form class="forms" action="#" method="post">
+            <fieldset>
+              <ol>
+                <li class="form-row text-area-row">
+                  <label>Отговор</label>
+                  <textarea name="message" class="text-area required"></textarea>
+                </li>
+                <li class="form-row hidden-row">
+                  <input type="hidden" name="hidden" value="">
+                </li>
+              </ol>
+              <input type="hidden" name="v_error" id="v-error" value="Required">
+              <input type="hidden" name="v_email" id="v-email" value="Enter a valid email">
+            </fieldset>
+          </form>
+            <div class="one-half intro"><a href="viruses.html" class="button green">Отговори</a></div>
+            <div class="one-half last"><a style="float: right" href="viruses.html" class="button blue">Назад</a></div>
+          <div class="response"></div>
+        </div>
+      </div>
+          </li>
+        </ol>
+      </div>
     </div>
-     <div class="one-third last">
+     <div class="sidebar">
       <div class="sidebox">
         <h3 class="line">Търсене</h3>
         <form class="searchform" method="get" action="#">
@@ -109,7 +136,7 @@
 </div>
 <div id="footer">
   <div class="footer">
-    <p>Copyright Socialike 2045. All rights reserved // Design by <a href="http://elemisfreebies.com">elemis</a>.</p>
+    <p>WebCare 2017 &copy; All rights reserved.</p>
   </div>
 </div>
 <script src="style/js/scripts.js"></script>
