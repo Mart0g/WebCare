@@ -1621,3 +1621,78 @@ ol.commentlist li {
     vertical-align: middle;
     padding: 10px;
 }*/
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+.tg td{ 
+	font-family: 'Museo300Regular';
+	font-size:14px;
+	padding:10px 5px;
+	border-style:solid;
+	width: 70%;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
+
+.tg th {
+	font-family: 'Museo300Regular';
+	font-size:18px;
+	font-weight:normal;
+	padding:10px 5px;
+/*	border-style:solid;
+	border-width:1px;*/
+	overflow:hidden;
+	word-break:normal;
+
+	    color: #606060;
+
+
+	width: 70%;
+    border: 1px solid;
+    background: #f7f7f7;
+    height: 35px;
+    line-height: 1;
+    padding: 5px 10px;
+    color: #555555;
+    resize: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+/*    display: inline-block;*/
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+}
+.tg .tg-yw4l {
+	vertical-align:top;
+	font-family: 'Museo300Regular';
+}

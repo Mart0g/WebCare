@@ -125,9 +125,8 @@
                             </p>
 
                             <p class="form-submit">
-                                <input name="submit" type="submit" id="submit" class="submit" value="Търси"/>
+                                <input name="submit" type="button" id="submit" value="Търси" onclick="showAllDoctorsHoursListed()"/>
                             </p>
-
 
                         </form>
                     </div>
@@ -146,22 +145,52 @@
                 $("#tags").easyAutocomplete(options);
                 $(".easy-autocomplete").css("display", "table-cell");
             </script> -->
+
+
+            <div id="doctors-hours-listed" style="display:none;">
+                <div class="outer">
+                    <div class="inner">
+                        <div id="respond" class="comment-respond">
+                            <table class="tg">
+                              <tr>
+                                <th class="tg-yw4l">Име</th>
+                                <th class="tg-yw4l">Работно време</th>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">д-р. Иван Иванов, гинеколог</td>
+                                <td class="tg-yw4l">Пон.-Пет. 09:00 - 18:00</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">д-р. Мария Иванова, педиатър</td>
+                                <td class="tg-yw4l">Пон.-Сряда. 09:00 - 18:00</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">д-р. Петър Иванов, хирург</td>
+                                <td class="tg-yw4l">Пон.-Пет. 10:30 - 18:00</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">д-р. Георги Димитров, травматолог</td>
+                                <td class="tg-yw4l">Пон.-Сряда. 09:00 - 18:00</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">д-р. Иванка Димитрова, УНГ</td>
+                                <td class="tg-yw4l">Вт.-Пет. 09:00 - 18:00</td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                function showAllDoctorsHoursListed() {
+                   document.getElementById('doctors-hours-listed').style.display = "block";
+                }
+            </script>
+
         </div>
 
         <br /><br /><br />
-
-<!--         <div id="dp"></div>
-        <script type="text/javascript">loadTimetable()</script> -->
-
-<!--         <div id="myModal" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
-
-        </div> -->
-
 
     </div>
     <div class="one-third last">
