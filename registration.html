@@ -13,6 +13,9 @@
 <script src="style/js/superfish.js"></script>
 <script src="style/js/jquery.prettyPhoto.js"></script>
 <script src="scripts/swfobject/swfobject.js"></script>
+<style>
+    .required:after { content:" *"; color: red;}
+</style>​
 </head>
 <body>
 <div id="body-wrapper">
@@ -34,23 +37,23 @@
             <fieldset>				
 				<ol>
 					<li class="form-row text-input-row">
-					<label>Име</label>
+					<label class="required">Име</label>
 					<input type="text" name="name" value="" class="text-input required name">
 					</li>
 					<li class="form-row text-input-row">
-					<label>Фамилия</label>
+					<label class="required">Фамилия</label>
 					<input type="text" name="surname" value="" class="text-input required name">
 					</li>
 					<li class="form-row text-input-row">
-					<label>Email</label>
+					<label class="required">Email</label>
 					<input type="email" name="email" value="" class="text-input required email">
 					</li>
 					<li class="form-row text-input-row">
-					<label>Парола</label>
+					<label class="required">Парола</label>
 					<input type="password" name="password" value="" class="text-input required password">
 					</li>
 					<li class="form-row text-input-row">
-					<label>Повтори</label>
+					<label class="required">Повтори</label>
 					<input type="password" name="password" value="" class="text-input required password">
 					</li>
 					<li class="form-row hidden-row">
