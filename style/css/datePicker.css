@@ -1,0 +1,47 @@
+input {
+    position: relative;
+    width: 150px; height: 20px;
+    color: white;
+}
+
+input:before {
+/*    position: absolute;*/
+    top: 3px; left: 3px;
+    content: attr(data-date);
+    display: inline-block;
+    color: #555555;
+}
+
+input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+    display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    opacity: 1;
+}
+
+#dateFrom, #dateTo {
+    width: 30%;
+    border: 1px solid #e3e3e3;
+    background: #f7f7f7;
+    height: 35px;
+    line-height: 1;
+    padding: 5px 10px;
+    color: #555555;
+    resize: none;
+    font-family: 'Museo300Regular';
+    font-size: 14px;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}

@@ -66,14 +66,24 @@
 <div id="wrapper">
     <div class="two-third">
         <div class="ui-widget">
-            <label for="tags">Име на лекар: </label>
-            <input id="tags">
+            <label for="tags" id="tagsLabel">Име на лекар: </label>
+            <input id="tags" placeholder="Моля въведете име на лекар">
             <script>
                 var options = {
-                    data: ["blue", "green", "pink", "red", "yellow"]
+                    data: ["Иванов", "Петров", "Георгиева", "Иванова", "Димитров"]
                 };
-
+                
+                /*function filterOptions(val){
+                    $("#tags").easyAutocomplete(options);
+                    var filtered = $.extend(true, [], options);
+                    filtered["data"] = options["data"].filter(function(element){
+                        return element.toLowerCase().indexOf(val.toLowerCase())>-1;
+                    });
+                    $("#tags").easyAutocomplete(filtered);
+                }*/
+                
                 $("#tags").easyAutocomplete(options);
+                $(".easy-autocomplete").css("display", "table-cell");
             </script>
         </div>
 

@@ -9,10 +9,15 @@
     <link rel="stylesheet" type="text/css" href="style/css/nivo-slider.css" media="screen">
     <link rel="stylesheet" type="text/css" href="style/type/classic.css" media="all">
     <link rel="stylesheet" type="text/css" href="style/type/goudy.css" media="all">
+    <link rel="stylesheet" type="text/css" href="style/css/datePicker.css" media="all">
+
     <script src="style/js/jquery-1.6.2.min.js"></script>
     <script src="style/js/superfish.js"></script>
     <script src="style/js/jquery.prettyPhoto.js"></script>
     <script src="style/js/jquery.nivo.slider.js"></script>
+    <script src="style/js/datePicker.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 
     <!--Timetable -->
     <script src="scripts/loadTimetable.js" type="text/javascript"></script>
@@ -85,37 +90,37 @@
                                     $(".easy-autocomplete").css("display", "table-cell");
                                 </script>
 
-
                             </p>
 
                             <p class="doctor-hours-search">
-                                <label for="doctorNameInput">От</label>
-                                <select class="doctorNameInput">
-                                    <option></option>
-                                    <option>Понеделник</option>
-                                    <option>Вторник   </option>
-                                    <option>Сряда     </option>
-                                    <option>Четвъртък </option>
-                                    <option>Петък     </option>
-                                    <option>Събота    </option>
-                                    <option>Неделя    </option>
-                                </select>
+                                <label for="dateFrom">От</label>
+                                <input id="dateFrom" class="doctorNameInput" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2017-06-15">
+                                <script type="text/javascript">
+                                    $("input").on("change", function() {
+                                        this.setAttribute(
+                                            "data-date",
+                                            moment(this.value, "YYYY-MM-DD")
+                                            .format( this.getAttribute("data-date-format") )
+                                        )
+                                    }).trigger("change")
+                                </script>
                             </p>
 
                             <p class="doctor-hours-search">
-                                <label for="doctorNameInput">До</label>
-                                <select class="doctorNameInput">
-                                    <option></option>
-                                    <option>Понеделник</option>
-                                    <option>Вторник   </option>
-                                    <option>Сряда     </option>
-                                    <option>Четвъртък </option>
-                                    <option>Петък     </option>
-                                    <option>Събота    </option>
-                                    <option>Неделя    </option>
-                                </select>
+                                <label for="dateTo">До</label>
+                                <input id="dateTo" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2017-07-02">
+                                <script type="text/javascript">
+                                    $("input").on("change", function() {
+                                        this.setAttribute(
+                                            "data-date",
+                                            moment(this.value, "YYYY-MM-DD")
+                                            .format( this.getAttribute("data-date-format") )
+                                        )
+                                    }).trigger("change")
+                                </script>
                             </p>
 
+           
                             <p class="doctor-hours-search">
                                 <label for="doctorNameInput">Сортиране</label>
                                 <select class="doctorNameInput">
