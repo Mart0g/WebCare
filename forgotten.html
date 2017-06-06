@@ -27,27 +27,25 @@
   <div id="wrapper">
     <div class="container">
       <div class="content intro">
-        <h2 class="line">Вход като пациент</h2>
+        <h2 class="line">Забравена парола</h2>
         <div class="form-container intro">
           <form class="forms" action="index2.html" method="post">
             <fieldset>
               <ol>
                 <li class="form-row text-input-row">
+                  <span>Подновяване на паролата за следния акаунт:</span>
+                </li>
+
+                <li class="form-row text-input-row">
                   <label>Email</label>
                   <input type="email" name="email" value="" class="text-input required email">
                 </li>
-                <li class="form-row text-input-row">
-                  <label>Парола</label>
-                  <input type="password" name="password" value="" class="text-input required password">
-                </li>
+                
                 <li class="form-row hidden-row">
                   <input type="hidden" name="hidden" value="">
                 </li>
-                <li class="form-row" style="text-align: center;">
-                  <span><a href="forgotten.html">Забравена парола?</a></span>
-                </li>
                 <li class="button-row">
-                  <input type="submit" value="Вход" name="submit" class="btn-submit">
+                  <input type="submit" value="Изпрати нова парола" name="submit" class="btn-submit">
                 </li>
               </ol>
               <input type="hidden" name="v_error" id="v-error" value="Required">
